@@ -1,0 +1,41 @@
+{
+  "clean_environment_install": true,
+  "portable_copy_commands": [
+    {
+      "command": [
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout": "usage: main.py [-h] {audit,resample,validate,figures,all}\n\nCOS1: audit, FFT resampling and real-signal plots\n\npositional arguments:\n  {audit,resample,validate,figures,all}\n\noptions:\n  -h, --help            show this help message and exit\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "audit"
+      ],
+      "returncode": 0,
+      "stdout": "{\"command\": \"audit\", \"records\": 17, \"passed\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "resample"
+      ],
+      "returncode": 0,
+      "stdout": "{\"command\": \"resample\", \"records\": 17, \"passed\": 17}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "validate"
+      ],
+      "returncode": 0,
+      "stdout": "{\"command\": \"validate\", \"records\": 17, \"passed\": 17}\n",
+      "stderr": ""
+    }
+  ],
+  "notebook_clean_kernel": "BLOCKED: TCP and IPC sockets denied; all cells passed in a fresh IPython process",
+  "output_hashes_match": true,
+  "output_count": 17,
+  "platform": "Linux; Windows not executed"
+}
