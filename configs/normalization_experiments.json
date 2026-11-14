@@ -1,0 +1,152 @@
+{
+  "schema": 1,
+  "fs_hz": 51200,
+  "methods": [
+    "none",
+    "individual_z",
+    "max_abs",
+    "rms",
+    "group_z",
+    "reference_rms"
+  ],
+  "scope": "descriptive_only_not_train_test",
+  "group_weighting": "equal_record_mixture",
+  "reference_aggregation": "median_of_record_RMS",
+  "group_z": [
+    {
+      "id": "CWRU_48k",
+      "fit_ids": [
+        "cwru_normal"
+      ],
+      "apply_ids": [
+        "cwru_normal"
+      ],
+      "note": "Одна исправная запись; отдельная исходная полоса 24 кГц. Это вырожденный по числу записей пример общей оценки."
+    },
+    {
+      "id": "CWRU_12k",
+      "fit_ids": [
+        "cwru_inner",
+        "cwru_ball",
+        "cwru_outer"
+      ],
+      "apply_ids": [
+        "cwru_inner",
+        "cwru_ball",
+        "cwru_outer"
+      ],
+      "note": "Только неисправные записи с исходной полосой до 6 кГц. Не общий масштаб с исправной 97.mat."
+    },
+    {
+      "id": "Paderborn_N15_M07_F10",
+      "fit_ids": [
+        "pu_K001",
+        "pu_KA01"
+      ],
+      "apply_ids": [
+        "pu_K001",
+        "pu_KA01"
+      ],
+      "note": "Одинаковый номинальный режим и канал; единица амплитуды не подтверждена."
+    },
+    {
+      "id": "JNU_600rpm",
+      "fit_ids": [
+        "jnu_normal",
+        "jnu_inner",
+        "jnu_outer",
+        "jnu_ball"
+      ],
+      "apply_ids": [
+        "jnu_normal",
+        "jnu_inner",
+        "jnu_outer",
+        "jnu_ball"
+      ],
+      "note": "Одинаковая скорость и канал; нагрузка и калибровка неизвестны. Только условное описательное сравнение."
+    },
+    {
+      "id": "MFPT_270lb",
+      "fit_ids": [
+        "mfpt_baseline_1",
+        "mfpt_OuterRaceFault_1"
+      ],
+      "apply_ids": [
+        "mfpt_baseline_1",
+        "mfpt_OuterRaceFault_1"
+      ],
+      "note": "25 Гц вращения, 270 lb, исходно 97656 Гц, g."
+    },
+    {
+      "id": "MFPT_0lb",
+      "fit_ids": [
+        "mfpt_InnerRaceFault_vload_1"
+      ],
+      "apply_ids": [
+        "mfpt_InnerRaceFault_vload_1"
+      ],
+      "note": "Отдельная запись при 0 lb и 48828 Гц. Одночленная группа, не сравнение состояний."
+    },
+    {
+      "id": "HUST_X",
+      "fit_ids": [
+        "hustbearing_medium_ball_65_full_X"
+      ],
+      "apply_ids": [
+        "hustbearing_medium_ball_65_full_X",
+        "hustbearing_medium_ball_65"
+      ],
+      "note": "Только полный канал; нет исправного контроля. X/Y/Z одного эксперимента, отдельные масштабы по осям."
+    },
+    {
+      "id": "HUST_Y",
+      "fit_ids": [
+        "hustbearing_medium_ball_65_full_Y"
+      ],
+      "apply_ids": [
+        "hustbearing_medium_ball_65_full_Y"
+      ],
+      "note": "Только полный канал; нет исправного контроля. X/Y/Z одного эксперимента, отдельные масштабы по осям."
+    },
+    {
+      "id": "HUST_Z",
+      "fit_ids": [
+        "hustbearing_medium_ball_65_full_Z"
+      ],
+      "apply_ids": [
+        "hustbearing_medium_ball_65_full_Z"
+      ],
+      "note": "Только полный канал; нет исправного контроля. X/Y/Z одного эксперимента, отдельные масштабы по осям."
+    }
+  ],
+  "reference_rms": [
+    {
+      "id": "MFPT_healthy_270lb",
+      "fit_ids": [
+        "mfpt_baseline_1"
+      ],
+      "apply_ids": [
+        "mfpt_baseline_1",
+        "mfpt_OuterRaceFault_1"
+      ],
+      "note": "Единственный исправный эталон, RMS; одинаковые зарегистрированные режим и единицы g."
+    },
+    {
+      "id": "PU_healthy_N15_M07_F10",
+      "fit_ids": [
+        "pu_K001"
+      ],
+      "apply_ids": [
+        "pu_K001",
+        "pu_KA01"
+      ],
+      "note": "Условный внутренний эталон: тот же режим/канал; не физическая калибровка, единицы неизвестны."
+    }
+  ],
+  "reference_not_applicable": {
+    "CWRU": "Исправная и неисправные записи имеют разные исходные полосы. Общий эталон отложен.",
+    "JNU": "Нагрузка и калибровка не подтверждены: исправная запись не принята как обоснованный эталон.",
+    "MFPT": "Для внутреннего кольца при 0 lb нет исправного контроля при той же нагрузке.",
+    "HUSTbearing-Huazhong": "Нет исправной записи; оси не объединяются в эталон."
+  }
+}
